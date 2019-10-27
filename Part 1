@@ -1,0 +1,21 @@
+import random
+
+vowels = [ "a", "e", "i", "o", "u"]
+
+consonants = [ "b", "c", "d", "f", "g", "h", "j", 
+"k", "l", "m", "n", "p", "q", "r", "s", "t", "v", "w", "x", "y", "z"]
+
+letters = []
+
+vowel_count = int(input("Choose a number from 1-9: "))
+
+for x in range(vowel_count):
+    random_index = random.randint(0, 4)
+    letters.append(vowels[random_index])
+
+
+for x in range(9 - vowel_count):
+    random_index = random.randint(0, 20)
+    letters.append(consonants[random_index])
+
+print(letters)
